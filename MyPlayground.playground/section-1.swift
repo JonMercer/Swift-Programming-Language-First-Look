@@ -45,6 +45,31 @@ let daysInWeek : Float = 7 //constants
 //let immutable
 //can use let for everythig
 
+//_+_+_+_+_+_+_+_+_
+//  PRINTING
+println("Foo")
+
+var dayOfWeek = "Tuesday"
+
+var num1 = 2
+
+println("totay is \(dayOfWeek) and 2 plus 2 is \( num1 * num1 )")
+
+//casting
+
+var quantity = 17
+var price = 3.55
+
+println("The amount is \(Double(quantity) * price)")
+
+
+
+
+
+
+
+
+
 
 
 
