@@ -62,6 +62,27 @@ var price = 3.55
 
 println("The amount is \(Double(quantity) * price)")
 
+//_+_+_+_+_++
+//  If Statements
+
+
+var myVar = 20
+
+if myVar > 9000 {
+    //something
+} else {
+    //something else
+}
+//ifs require curly braces
+
+//conditions must eveluate as boolean, not just x = 0 .... if x { ....} 
+
+
+//if a && b
+
+
+
+
 
 
 
