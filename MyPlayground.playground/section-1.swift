@@ -14,3 +14,27 @@ for i in 0..<100 {
 }
 
 highScore
+
+//  VARIABLES
+
+
+
+/*
+all variables in swift are declared with var
+like high score
+swift is a type-save language. Using type inference
+
+"var foo" will not compile, but this will
+*/
+
+var myVariable : Int
+
+//Fload, Double, Bool, String, Character, Arrays, Dictionaries
+
+//example
+
+var myVariableAgain : Int = 1000
+
+
+
+
