@@ -139,24 +139,41 @@ do {
     //do this thing first then check the condition
 } while someBoolean
 
+//  FUNCTIONS _+_+_+_+__+
 
 
+func myFunction() {
+    println("Some function")
+}
+
+func anotherFunction(name : String) {
+    println("Hello, \(name)")
+}
+
+anotherFunction("Sam")
+
+//NOTE: input parameters are constants unless
 
 
+func immutableParam(var age : Int) {
+    age = age + 1
+}
+
+//returning something
+
+func number() -> Int {
+    return 5
+}
+
+//NEW!
+//default parameters
+func defaultFunction(name : String = "James") {
+    println("Hello, \(name)")
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+defaultFunction() //OK
+//defaultFunction("Hoola") //Not Okay
+defaultFunction(name: "Samantha")
 
 
