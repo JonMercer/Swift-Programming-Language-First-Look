@@ -37,4 +37,15 @@ var myVariableAgain : Int = 1000
 
 
 
+//  CONSTANTS 
+
+let daysInWeek : Float = 7 //constants
+
+//var mutable
+//let immutable
+//can use let for everythig
+
+
+
+
 
