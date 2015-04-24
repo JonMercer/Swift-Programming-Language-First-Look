@@ -82,6 +82,30 @@ if myVar > 9000 {
 
 
 
+//  SWITCH _+_+_+_+_+_+
+
+let speed = 2
+
+switch speed {
+case 1:
+    var one = 1
+case 2:
+    var two = 2
+case 5:
+    break
+case 5...50:
+    println("This is a closed range")
+default:
+    var rest = "rest"
+}
+
+//there is no fallthrough from one case to another
+//stops at first case
+//break does nothing
+
+
+
+
 
 
 
