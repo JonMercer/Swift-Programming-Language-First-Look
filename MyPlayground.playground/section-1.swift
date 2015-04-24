@@ -104,6 +104,47 @@ default:
 //break does nothing
 
 
+//  LOOPS _+_+_+_+_+_+_+_+_
+
+for var i = 0; i < 100; i++ {
+    //something
+}
+
+//for-in loop
+for eachItem in 1...100 {
+    println(eachItem)
+    
+}
+
+
+//range:     0...100, 0..<someArray.length
+
+
+var name = "Billy"
+
+for eachChar in name {
+    println(eachChar)
+}
+
+
+//while
+
+var someBoolean = true
+
+while someBoolean {
+    //do something
+}
+
+do {
+    //do this thing first then check the condition
+} while someBoolean
+
+
+
+
+
+
+
 
 
 
