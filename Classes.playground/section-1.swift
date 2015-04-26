@@ -206,9 +206,38 @@ println(newPlayerAgain.bonus)
 
 
 
+//  PROPERTU OBSERVERS _+_+_+_+_+_+
 
 
+import UIKit
 
+//Some function that need to contact the interenet
+func getDailyBonus2() -> Int {
+    return random()
+}
+
+class PlayerAgain2 {
+    //properties
+    var name : String = "John Doe" {
+        willSet(myNewValue) {
+            //called before the change
+            
+            println("About change name to \(myNewValue)")
+        }
+        didSet{
+            println("Have changed name from \(oldValue)")
+        }
+    }
+    var score = 0
+    lazy var bonus = getDailyBonus() //cannot add property observers to lazy values
+    
+    func description() -> String {
+        return ("Foo \(name) bar \(score)")
+    }
+}
+
+var newPlayerAgain2 = PlayerAgain2()
+newPlayerAgain2.name = "Bod Ding"
 
 
 
