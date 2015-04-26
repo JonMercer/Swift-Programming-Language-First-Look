@@ -133,6 +133,52 @@ examplePerson.fullName = "Jone Dop"
 
 
 
+//  TYPE PROPERTIES _+_+_+_+_+_
+//a class-wide property
+
+class BankAccount {
+    
+    let accountNumber : Int
+    let routingCode = 1243567
+    var balance : Double
+    class var interestRate : Float {
+        return 2.0
+    }
+    
+    init(num : Int, initialBalance : Double) {
+        self.accountNumber = num
+        self.balance = initialBalance
+    }
+    
+    func deposit(amount : Double) {
+        balance += amount
+    }
+    
+    func widthraw(amount : Double) -> Bool {
+        if balance > amount {
+            balance -= amount
+            return true
+        } else {
+            println("Insuficient Funds")
+            return false
+        }
+    }
+    
+    class func example() {
+        //CANNOT access instance data
+        println("Foo \(interestRate)")
+    }
+}
+
+var firstAccount = BankAccount(num: 213456, initialBalance: 123456.8)
+var secondAccount = BankAccount(num: 484884, initialBalance: 26742387.3895)
+
+//Will always be avaialble even without hte instances of the classs
+BankAccount.interestRate
+
+BankAccount.example()
+
+
 
 
 
