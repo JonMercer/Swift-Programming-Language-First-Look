@@ -98,6 +98,44 @@ newPlayer.description()
 
 
 
+//  COMPUTED PROPERTIES _+_+_+_+_
+
+
+import Foundation
+class Person {
+    //STORED property
+    var firstName : String
+    var lastName : String
+    
+    //COMPUTED property (usually only have a getter)
+    var fullName :String {
+        get {
+            //return computed property
+            return firstName + " " + lastName
+        }
+        set {
+            //split newValue //NOTE: newValue is a default name
+            var nameArray = newValue.componentsSeparatedByString(" ")
+            firstName = nameArray[0]
+            lastName = nameArray[1]
+        }
+    }
+    
+    init(first: String, last: String) {
+        self.firstName = first
+        self.lastName = last
+    }
+}
+
+var examplePerson = Person(first: "Jony", last:"Derp")
+println(examplePerson.fullName)
+examplePerson.fullName = "Jone Dop"
+
+
+
+
+
+
 
 
 
