@@ -242,3 +242,94 @@ let sortedArray = sorted(unsortedAray,
 
 
 
+
+
+//  DEFINING CLASSES _+_+_+_+_+_
+
+class Player {
+    //properties
+    var name : String
+    var score : Int
+    
+    
+    //method
+    func description() {
+        println("Player \(name) scored \(score)")
+    }
+    
+    //initializer or constructor
+    init() {
+        name = "Doe"
+        score = 0
+    }
+    
+    init(name : String) {
+        self.name = name
+        score = 0
+    }
+    
+    
+}
+
+var fred = Player(name:"Fred")
+
+
+
+
+
+//Inheritance
+
+//Extending a clsss
+class GoldPlayer : Player {
+    
+    func newMetod() {
+        //Something
+    }
+    
+    
+    override func description() {
+        println("*** GOLD ****")
+        super.description()
+        
+    }
+}
+
+//Term: function is within the class, method is calling the function from outside the class
+
+class Example {
+    func multiParam (first :Int, second :Int) {
+        println("First \(first) second is \(second)")
+    }
+}
+
+//a method call
+var obj = Example()
+obj.multiParam(123, second: 456)
+
+
+
+//Access level (private)
+
+//public
+
+//internal default level, accesible within same module
+
+//private
+
+//class must be public if you want method to be public
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
