@@ -185,3 +185,60 @@ case default: //If you don't have defult, compiler will complain if you have not
 
 
 
+
+//  CLOSURES _+_+_+_+_+_+
+//Group code in self-contained reusable unit, just like a functuon
+//AKA Anonymous Functions / Lambsdas / Blocks
+
+let myClosure = {
+    println("This is a closure")
+}
+
+
+//creating function that takes closure as parameter
+
+func doFiveTimes(closure : () -> () ) {
+    for i in 1...5 {
+        closure()
+    }
+}
+
+doFiveTimes(myClosure)
+
+//faster way of doing closures
+
+
+doFiveTimes( {
+                println("Fast Closure")
+            })
+
+
+func myFunc () -> () { //function that takes nothing returns nothing
+    println("Some simple func")
+}
+
+
+{ () -> () in //in separates stub from body
+    println("Simple closure agian")
+}
+
+//Closures with parameters
+
+//Sorted is built in
+
+let unsortedAray = [3,5,5,2,3,5,6,6,3,3,34,56,7,5,64,54,3,4,3,35,5,5,45,45,45,34,34,4]
+
+
+
+let sortedArray = sorted(unsortedAray,
+    { (first : Int, second : Int) -> Bool in
+        return first < second
+    } )
+
+
+
+
+
+
+
+
