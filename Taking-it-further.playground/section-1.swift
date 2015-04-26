@@ -86,6 +86,49 @@ highScore--
 
 
 
+//  COMPARISON_+_+_+_+_+_+
+
+//a > 50 && b <= 60 || c == b
+
+
+
+//how to check if objects are identical (only for object)
+// ==== checks if there are two references to the same object
+
+var dateA = NSDateComponents()
+dateA.year = 2000
+dateA.month = 01
+dateA.day = 01
+
+var dateB = NSDateComponents()
+dateB.year = 2000
+dateB.month = 01
+dateB.day = 01
+
+
+//check Equality: ==
+if dateA == dateB {
+    println("Yes, A and B are equal")
+}
+
+// cehck Identity
+if dateA === dateB {
+    println("Identitcal")
+} else {
+    println("May be equal but not identical")
+}
+
+
+var dateC = dateA //Objects are refference type. Not a new copy was created
+
+if dateA === dateC {
+    println("Yes Both identical")
+}
+
+
+
+
+
 
 
 
