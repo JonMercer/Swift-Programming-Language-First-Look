@@ -102,3 +102,48 @@ let (name,length) = getSongAndLen()
 
 
 
+//  OPTIONALS _+_+_+_+_+_
+
+
+var temperature : Int
+//this variable must be initialized before doing somethign with it. Has no default values
+//NOTE: variables are not allowed to have nil values
+
+
+var temp : Int? //means either integer or nil
+
+if temp != nil {
+    println("Temp is \(temp!)") // ! is forced unwrapping. 
+    //Unwrapping before checking could lead to runtime exception. But we checked with if statement before unwrapping so we're fine
+}
+
+
+//Optionals and dictionaries
+
+var fullname = states["NV"]
+
+if fullname != nil {
+//...
+}
+
+
+//Optional binding. Like the two actions above,
+if let fullname = states["NV"] {
+    //fullname exists and has a value
+    println("State is \(fullname)")
+} else {
+    //fullname DNE
+    println("No name found")
+}
+//Benefit: no forced unwrapping
+
+//Optionals in swift is not the same as nil pointers in Objective C
+
+
+
+
+
+
+
+
+
