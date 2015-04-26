@@ -54,3 +54,38 @@ myObject.value
     // – cannot inherit
     // – cannot make deinitializers
 
+
+
+
+
+
+//  OPERATORS _+_+_+_+_+_
+
+import UIKit
+
+var a = 5
+var b = 50
+var c = 11.38
+var highScore = 9000
+
+var result = a + b
+result = b - 20
+var x = c * 66
+x = c / 1.1
+
+highScore += 50
+
+highScore++
+highScore--
+
+++highScore
+--highScore
+
+
+//Overflow: swift will not allow overflow unless you do "&+ &- &* &/ &%"
+
+
+
+
+
+
