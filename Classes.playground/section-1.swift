@@ -65,6 +65,39 @@ var somePlayer : Player2 = Player2(name: "Alice", score:6)
 println(somePlayer.description())
 
 
+//  INHERITACE _+_+_+_+_+
+
+
+class GoodPlayer : Player {
+    var memberLevel : String
+    
+    override init() {
+        memberLevel = "Gold"
+        super.init() //must call the super init, but only in inits
+    }
+    
+    func calculateBonus() {
+        self.score += 100
+        println("Player score is \(score)")
+    }
+    
+    override func description() -> String {
+        let originalMessage = super.description()
+        return("\(originalMessage) is a \(memberLevel)")
+    }
+    
+    
+    
+}
+
+var newPlayer = GoodPlayer()
+newPlayer.calculateBonus()
+newPlayer.description()
+
+//adding a final to class prevents overriding
+
+
+
 
 
 
