@@ -180,6 +180,36 @@ BankAccount.example()
 
 
 
+//  LAZY PROPERTIES _+_+_+_+_+_
+
+import UIKit
+
+//Some function that need to contact the interenet
+func getDailyBonus() -> Int {
+    return random()
+}
+
+class PlayerAgain {
+    //properties
+    var name : String = "John Doe"
+    var score = 0
+    lazy var bonus = getDailyBonus() //call to function lazily
+    //cannot do a lazy let
+    
+    func description() -> String {
+        return ("Foo \(name) bar \(score)")
+    }
+}
+
+var newPlayerAgain = PlayerAgain()
+println(newPlayerAgain.bonus)
+
+
+
+
+
+
+
 
 
 
