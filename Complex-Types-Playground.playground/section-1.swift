@@ -66,3 +66,39 @@ for (k, v) in states {
     println(v)
 }
 
+
+
+
+// Tuples _+_+_+_+_+_+_+_
+
+//collection of elements
+
+var hello = "Hello"
+(95, "Foo", true, 5.5454545, hello)
+
+func getSongAndLen() -> (String, Int) {
+    return("Song",120)
+}
+
+let result = getSongAndLen()
+
+println(result.0); println(result.1)
+
+//or a friendly name
+
+func getSongAndLen2() -> (song:String, len:Int) {
+    return("Song",120)
+}
+
+let result2 = getSongAndLen2()
+
+println(result2.song); println(result2.len)
+
+//decomposing tuple right away
+let (name,length) = getSongAndLen()
+
+//Not meant to replace formal date structures.
+
+
+
+
