@@ -37,3 +37,32 @@ for flavour in flavours {
 
 
 
+
+// Dictionary _+_+_+_+
+//aka Map, Hashtable
+
+var states = [ "Az":"Arizona","CA": "California"]
+
+//declaring dictionary
+
+var products : [Int:String]
+
+println(states["AZ"]) //Optional means key may exist or not
+
+//addint to dictionary
+states["FL"] = "Florida" //Will change existing or add new
+
+states .updateValue("Nevada", forKey:"NV") //If key exists, update the value if not add this key value pair
+//will return nil if key didnt exist, will return the value then update it if jey did exists. ??
+
+
+//Remove
+states["DE"] = nil
+states.removeValueForKey("CA")
+
+
+for (k, v) in states {
+    println(k)
+    println(v)
+}
+
