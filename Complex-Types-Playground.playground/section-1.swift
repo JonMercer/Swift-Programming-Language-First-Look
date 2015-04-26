@@ -143,6 +143,44 @@ if let fullname = states["NV"] {
 
 
 
+//  ENUMERATIONS _+_+_+_+_+_+_+_+_+_
+//If we want to limit a type to a certain number like ints from 5 to 8 and no more
+
+
+enum SeatPrefenence {
+    case Middle
+    case Aisle //this is a member of the SeatPreference
+    case Window
+    case NoPreference
+}
+
+var jenPrefer : SeatPrefenence
+//jenPrefer = SeatPrefenence.Aisle
+jenPrefer = .Aisle //same as above
+
+let royPrefers = SeatPrefenence.Aisle //same as above
+
+//Enums and switch
+
+switch royPrefers {
+case .Window:
+    println("Book Window")
+case .Aisle:
+    println("Book Aisle")
+case .Middle:
+    println("Book Middle")
+case .NoPreference:
+    println("Book a surprise")
+case default: //If you don't have defult, compiler will complain if you have not taken all paths (maybe because you added something in the future
+    println("Something went wrong")
+}
+
+//Can add properties, values, and methods in enums ??
+
+
+
+
+
 
 
 
