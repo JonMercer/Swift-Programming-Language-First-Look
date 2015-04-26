@@ -127,6 +127,43 @@ if dateA === dateC {
 
 
 
+//  ADVANCED OPERATORS _+_+_+_+_+_
+
+//Range operator
+    // 0...100 vs 0..<100
+
+//Nil Coalescing operator
+
+// optionalValue ?? defaultValue
+
+var personalSite : String?
+let defaultSite = "http://google.com"
+
+var website : String
+
+if personalSite != nil{
+     website = personalSite!
+} else {
+    website = defaultSite
+}
+
+//alternatively
+var website = personalSite ?? defaultSite
+
+// Remainder Operator %
+
+var totalUnits = 1242436
+var unitsPerBox = 24
+
+var leftover = totalUnits % unitsPerBox
+
+
+
+
+
+
+
+
 
 
 
