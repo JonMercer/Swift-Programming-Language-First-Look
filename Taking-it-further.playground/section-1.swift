@@ -148,7 +148,7 @@ if personalSite != nil{
 }
 
 //alternatively
-var website = personalSite ?? defaultSite
+var website2 = personalSite ?? defaultSite
 
 // Remainder Operator %
 
@@ -161,6 +161,15 @@ var leftover = totalUnits % unitsPerBox
 
 
 
+
+
+
+//  IMPORT _+_+_+_+_+_+_
+//swift is small. does not know a lot of things like dates and video encoding. You must leverage libraries and frameworks
+
+//cocoa container to three things, AppKit being one of the most useful ones
+
+//FOundation Framework: Not needed for any UI. Things like dates, multithreading and such. Indluded by defualt
 
 
 
