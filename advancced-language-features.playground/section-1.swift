@@ -151,6 +151,45 @@ message.reverseWords()
 
 
 
+//  GENERICS_+_+_+__+_
+
+//variables of specific type is a good thing
+
+//anyObject gives flexibility and dynamic
+
+//generics give both
+
+
+class SimpleClass {
+    var singleProperty : String = "A String"
+}
+
+let myInts = [123,12,4123,423,523,534,534,563]
+let myStrings = ["sdfdf","sdfdsf","sdfsdfsd"]
+let myObjects = [SimpleClass(), SimpleClass(), SimpleClass()]
+
+let someString = myStrings[0]
+
+
+//The swift array iterator does not care for the type inside the array
+
+func displayArray<T>(theArray : [T]) -> T {
+    for eachItem in theArray {
+        print(eachItem)
+        print(" : ")
+    }
+    let finalElement : T = theArray[theArray.count-1]
+    return finalElement
+}
+displayArray(myObjects)
+
+var finalString = displayArray(myStrings)
+
+
+
+
+
+
 
 
 
