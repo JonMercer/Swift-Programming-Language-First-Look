@@ -45,4 +45,28 @@ for item in controls {
 
 
 
+//  AnyObject and Any _+_+_+
+
+//dealing with non-specific data
+
+//anyObject has to be any
+//any can be tuples of object
+
+//swift to O-C : using objective C NSarray can hold any object in any position which you be a type of anyObject in Swift
+
+import UIKit
+
+var someObject : AnyObject
+
+someObject = "TLIhfneilrge rg t t t t t t" //can't put tuple or closure in this case. Can do string and its because we're using the UIKit string and int not swift's string and int
+
+if someObject is String {
+    let wordsArray = someObject.componentsSeparatedByString(" ")
+}
+
+
+
+
+
+
 
