@@ -66,6 +66,64 @@ if someObject is String {
 
 
 
+//  PROTOCOLS_+_+_+_+_+_
+
+//Protocol standadize behavour in classes without worrying about inheritance or formal relationships
+
+protocol Cleaner {
+    func cleanFloors()
+    func vacuum()
+    func emptyTrash() -> Bool
+    
+    //properties
+    var brokenBulbs : Bool {get set}
+}
+
+
+protocol ExampleProtocol {
+    //method signature
+    func simpleMethod() -> Bool
+    
+    //must always be a var
+    var simpleProperty : Int {get}
+}
+
+protocol ExampleProtocol2 {
+    //method signature
+    func simpleMethod2() -> Bool
+    
+    //must always be a var
+    var simpleProperty2 : Int {get}
+}
+
+class SuperClass {
+    //does nothing right now
+}
+
+class MyClass : SuperClass, ExampleProtocol, ExampleProtocol2 {
+    //can do anything else here along with promise to protocol
+    
+    func simpleMethod() -> Bool {
+        return true
+    }
+    
+    func simpleMethod2() -> Bool {
+        return false
+    }
+    
+    var simpleProperty : Int {
+        return 55
+    }
+    
+    var simpleProperty2 : Int {
+        return 77
+    }
+    
+    
+}
+
+
+
 
 
 
