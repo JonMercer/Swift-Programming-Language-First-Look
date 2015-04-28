@@ -125,6 +125,34 @@ class MyClass : SuperClass, ExampleProtocol, ExampleProtocol2 {
 
 
 
+//  ADDING FUNCTIONALOTY AND EXTENTIONS_+_+_+_+_+_
+
+
+//does not need source code
+//can be added to classes, structs, and enums
+
+extension String {
+    func reverseWords() -> String {
+        let wordsArray = self.componentsSeparatedByString(" ")
+        let reversedArray = wordsArray.reverse()
+        var newString = ""
+        for eachWord in reversedArray {
+            newString = "\(newString) \(eachWord) "
+        }
+        return newString
+    }
+}
+
+var message = "Reverse words in this string"
+message.reverseWords()
+
+//no need to call super, or override
+
+
+
+
+
+
 
 
 
