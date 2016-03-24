@@ -1,5 +1,5 @@
 //: Playground - noun: a place where people can play
-
+//https://www.raywenderlich.com/109156/introducing-protocol-oriented-programming-in-swift-2
 import UIKit
 
 var str = "Hello, playground"
