@@ -41,3 +41,61 @@ struct SwiftBird: Bird, Flyable {
   var airspeedvelocity: Double { return 2000.0 }
 }
 
+enum UnladenSwallow: Bird, Flyable {
+  case African
+  case European
+  case Unknown
+  
+  var name: String {
+    switch self {
+    case .African:
+      return "African"
+    case .European:
+      return "European"
+    case .Unknown:
+      return "What do you mean?"
+    }
+  }
+  
+  var airspeedvelocity: Double {
+    switch self {
+    case .African:
+      return 10.0
+    case .European:
+      return 9.9
+    case .Unknown:
+      fatalError("Bridge of death")
+    }
+  }
+}
+
+extension CollectionType {
+  func skip(skip: Int) -> [Generator.Element] {
+    guard skip != 0 else { return []}
+    
+    var index = self.startIndex
+    var result: [Generator.Element] = []
+    var i = 0
+    repeat {
+      if i % skip == 0 {
+        result.append(self[index])
+      }
+      index = index.successor()
+      i++
+    } while (index != self.endIndex)
+    
+    return result
+  }
+}
+
+let bunchaBirds: [Bird] =
+[UnladenSwallow.African,
+  UnladenSwallow.European,
+  UnladenSwallow.Unknown,
+  Penguin(name: "King Penguin"),
+  SwiftBird(version: 2.0),
+  FlappyBird(name: "Felipe", flappyAmplitude: 3.0, flappyFrequency: 20.0)]
+
+bunchaBirds.skip(3)
+
+
